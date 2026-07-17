@@ -40,7 +40,6 @@
     form.elements.email.value = organization.email || '';
     form.elements.address.value = organization.address || '';
     form.elements.siteUrl.value = organization.site_url || '';
-    form.elements.featuredLimit.value = String(organization.featured_limit || 3);
     form.elements.defaultStatus.value = organization.default_status === 'published'
       ? 'Publicado'
       : 'Rascunho';
@@ -90,7 +89,6 @@
       email: form.elements.email.value.trim(),
       address: form.elements.address.value.trim(),
       site_url: form.elements.siteUrl.value.trim(),
-      featured_limit: Number(form.elements.featuredLimit.value),
       default_status: form.elements.defaultStatus.value === 'Publicado' ? 'published' : 'draft',
       show_prices: form.elements.showPrices.checked
     };
