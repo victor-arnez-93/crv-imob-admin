@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex,nofollow">
+  <title>Configurações — CRV Imob</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/configuracoes.css">
+</head>
+<body class="admin-page" data-page="configuracoes">
+  <div id="adminShell"></div>
+  <main class="admin-main">
+    <div class="page-head"><div><span class="eyebrow">Preferências</span><h1>Configurações</h1><p>Informações essenciais utilizadas no painel e no site público.</p></div></div>
+    <form class="settings-layout" id="settingsForm">
+      <nav class="settings-tabs" aria-label="Seções"><button class="active" type="button" data-tab="business"><i class="fa-solid fa-building"></i> Empresa</button><button type="button" data-tab="contact"><i class="fa-solid fa-phone"></i> Contato</button><button type="button" data-tab="site"><i class="fa-solid fa-globe"></i> Site</button></nav>
+      <div class="settings-content">
+        <section class="panel settings-panel active" data-panel="business"><div class="panel-head"><div><small>Identificação</small><h2>Dados da empresa</h2></div></div><div class="form-grid"><label class="span-2">Nome comercial<input name="businessName" placeholder="Nome do corretor ou da imobiliária"></label><label>Tipo de operação<select name="businessType"><option>Corretor autônomo</option><option>Imobiliária</option></select></label><label>CRECI<input name="creci" placeholder="CRECI 000000-F"></label><label class="span-2">Descrição curta<textarea name="description" rows="4" placeholder="Apresente seu trabalho em poucas linhas..."></textarea></label></div></section>
+        <section class="panel settings-panel" data-panel="contact"><div class="panel-head"><div><small>Atendimento</small><h2>Canais de contato</h2></div></div><div class="form-grid"><label>WhatsApp<input name="whatsapp" placeholder="(15) 99999-9999"></label><label>Telefone<input name="phone" placeholder="(15) 0000-0000"></label><label class="span-2">E-mail comercial<input name="email" type="email" placeholder="contato@empresa.com.br"></label><label class="span-2">Endereço de atendimento<input name="address" placeholder="Rua, número, bairro, cidade — UF"></label></div></section>
+        <section class="panel settings-panel" data-panel="site"><div class="panel-head"><div><small>Presença digital</small><h2>Configurações do site</h2></div></div><div class="form-grid"><label class="span-2">Endereço do site<input name="siteUrl" type="url" placeholder="https://seusite.com.br"></label><label>Limite de destaques<select name="featuredLimit"><option>3</option><option>4</option><option>6</option></select></label><label>Status padrão<select name="defaultStatus"><option>Rascunho</option><option>Publicado</option></select></label><label class="span-2 check-card"><input name="showPrices" type="checkbox" checked><span><b>Exibir valores no catálogo</b><small>Quando desativado, o site mostrará “Consulte-nos”.</small></span></label></div></section>
+        <div class="settings-actions"><span id="settingsFeedback"></span><button class="button button-primary" type="submit"><span>Salvar alterações</span><i class="fa-solid fa-floppy-disk"></i></button></div>
+      </div>
+    </form>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/admin-shell.js"></script>
+  <script src="assets/js/weather.js"></script>
+  <script src="assets/js/configuracoes.js"></script>
+</body>
+</html>

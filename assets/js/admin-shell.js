@@ -342,7 +342,9 @@
     window.setInterval(updateClock, 30000);
 
     document.querySelectorAll('[data-user-first-name]').forEach((element) => {
-      element.textContent = getFirstName(context.profile.fullName);
+      element.textContent =
+        context.profile.companyName ||
+        getFirstName(context.profile.fullName);
     });
 
     window.dispatchEvent(new CustomEvent('crv:shell-ready', {
