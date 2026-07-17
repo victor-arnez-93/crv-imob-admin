@@ -1,0 +1,254 @@
+/* ============================================================
+   CRV IMOB — LOGIN.CSS
+   Tela de autenticação
+   ============================================================ */
+
+/* PÁGINA */
+.login-page {
+  min-height: 100vh;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  background-image: linear-gradient(
+      color-mix(in srgb, var(--color-bg) 76%, transparent),
+      color-mix(in srgb, var(--color-bg) 88%, transparent)
+    ),
+    var(--landing-background);
+  background-position: center;
+  background-size: cover;
+}
+
+.login-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 50% 45%,
+    color-mix(in srgb, var(--color-neon) 10%, transparent),
+    transparent 35%
+  );
+}
+
+/* LOGO E TEMA */
+.login-logo {
+  position: fixed;
+  z-index: 5;
+  top: 26px;
+  left: 30px;
+}
+
+.login-logo img {
+  width: 120px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.login-theme-toggle {
+  position: fixed;
+  z-index: 5;
+  top: 27px;
+  right: 30px;
+}
+
+/* ÁREA CENTRAL */
+.login-main {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  padding: 95px 20px 35px;
+  display: grid;
+  place-items: center;
+}
+
+.login-card {
+  width: min(420px, 100%);
+  padding: 34px;
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  background: color-mix(in srgb, var(--color-surface-solid) 88%, transparent);
+  box-shadow: var(--shadow-strong);
+  backdrop-filter: blur(24px);
+}
+
+.login-card-header {
+  text-align: center;
+}
+
+.login-icon {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto 17px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  color: var(--color-accent-strong);
+  background: var(--color-accent-soft);
+}
+
+.login-card-header > small {
+  color: var(--color-accent-strong);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.login-card-header h1 {
+  margin: 8px 0 7px;
+  font-size: 27px;
+}
+
+.login-card-header p {
+  margin-bottom: 0;
+  color: var(--color-muted);
+  font-size: 11px;
+}
+
+/* FORMULÁRIO */
+.login-form {
+  margin-top: 25px;
+}
+
+.login-form > label {
+  display: block;
+  margin: 15px 0 7px;
+  color: var(--color-text);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.input-wrapper {
+  min-height: 49px;
+  padding: 0 13px;
+  border: 1px solid var(--color-border);
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-surface-muted);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.input-wrapper:focus-within {
+  border-color: color-mix(in srgb, var(--color-accent) 70%, transparent);
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
+}
+
+.input-wrapper > i {
+  width: 16px;
+  color: var(--color-muted);
+  text-align: center;
+  font-size: 13px;
+}
+
+.input-wrapper input {
+  min-width: 0;
+  min-height: 47px;
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 12px;
+}
+
+.input-wrapper button {
+  padding: 5px;
+  border: 0;
+  color: var(--color-muted);
+  background: transparent;
+  cursor: pointer;
+}
+
+.login-options {
+  margin: 16px 0 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.custom-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--color-muted);
+  font-size: 9px;
+  cursor: pointer;
+}
+
+.custom-check input {
+  accent-color: var(--color-accent-strong);
+}
+
+.text-button {
+  padding: 0;
+  border: 0;
+  color: var(--color-accent-strong);
+  background: transparent;
+  font-size: 9px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.form-feedback {
+  min-height: 18px;
+  margin: 12px 0 0;
+  color: var(--color-danger);
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.form-feedback.is-success {
+  color: var(--color-success);
+}
+
+.back-link {
+  margin-top: 5px;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: var(--color-muted);
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.back-link:hover {
+  color: var(--color-text);
+}
+
+/* RESPONSIVO MOBILE */
+@media (max-width: 540px) {
+  .login-logo {
+    top: 18px;
+    left: 18px;
+  }
+
+  .login-logo img {
+    width: 100px;
+    height: 38px;
+  }
+
+  .login-theme-toggle {
+    top: 18px;
+    right: 18px;
+  }
+
+  .login-main {
+    padding: 85px 14px 22px;
+  }
+
+  .login-card {
+    padding: 27px 20px;
+    border-radius: 20px;
+  }
+
+  .login-card-header h1 {
+    font-size: 24px;
+  }
+}
+

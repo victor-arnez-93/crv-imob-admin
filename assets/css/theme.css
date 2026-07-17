@@ -1,0 +1,102 @@
+/* ============================================================
+   CRV IMOB — THEME.CSS
+   Tokens dos temas claro e escuro
+   ============================================================ */
+
+/* TEMA CLARO */
+:root,
+html[data-theme="light"] {
+  color-scheme: light;
+
+  --color-bg: #f2efe8;
+  --color-bg-soft: #e9e4d9;
+  --color-surface: rgba(255, 254, 250, 0.86);
+  --color-surface-solid: #fffefa;
+  --color-surface-muted: #ebe6dc;
+  --color-text: #172333;
+  --color-title: #102238;
+  --color-muted: #6e7880;
+  --color-border: rgba(65, 59, 47, 0.14);
+
+  --color-sidebar: #ded7c9;
+  --color-sidebar-deep: #cbc1ad;
+  --color-sidebar-text: #263343;
+  --color-sidebar-muted: #706d65;
+  --color-sidebar-active: rgba(255, 255, 255, 0.5);
+
+  --color-accent: #9b8157;
+  --color-accent-strong: #75603d;
+  --color-accent-soft: rgba(155, 129, 87, 0.15);
+  --color-neon: #c7b58d;
+  --color-success: #258b67;
+  --color-danger: #b5524a;
+  --color-warning: #b27a28;
+
+  --button-bg: #111419;
+  --button-text: #ffffff;
+  --button-glow: #b9a371;
+
+  --shadow-soft: 0 12px 36px rgba(61, 51, 36, 0.09);
+  --shadow-strong: 0 28px 70px rgba(61, 51, 36, 0.16);
+
+  --landing-background: url("../img/fundo1.png");
+  --dashboard-background: url("../img/fundodash1.png");
+}
+
+/* TEMA ESCURO */
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-bg: #080a0d;
+  --color-bg-soft: #0e1116;
+  --color-surface: rgba(20, 23, 28, 0.86);
+  --color-surface-solid: #14171c;
+  --color-surface-muted: #1b1f25;
+  --color-text: #e8ebee;
+  --color-title: #f5f6f7;
+  --color-muted: #9299a2;
+  --color-border: rgba(224, 230, 236, 0.11);
+
+  --color-sidebar: #080a0e;
+  --color-sidebar-deep: #11151b;
+  --color-sidebar-text: #eef1f4;
+  --color-sidebar-muted: #858d97;
+  --color-sidebar-active: rgba(221, 229, 235, 0.08);
+
+  --color-accent: #c7cdd2;
+  --color-accent-strong: #f0f3f5;
+  --color-accent-soft: rgba(211, 218, 224, 0.1);
+  --color-neon: #eef4f7;
+  --color-success: #54c79b;
+  --color-danger: #ef8078;
+  --color-warning: #e0ad5b;
+
+  --button-bg: #050608;
+  --button-text: #ffffff;
+  --button-glow: #e6edf2;
+
+  --shadow-soft: 0 12px 38px rgba(0, 0, 0, 0.28);
+  --shadow-strong: 0 30px 80px rgba(0, 0, 0, 0.45);
+
+  --landing-background: url("../img/fundo2.png");
+  --dashboard-background: url("../img/fundodash2.png");
+}
+
+/* TOKENS GLOBAIS */
+:root {
+  --font-title: "Sora", sans-serif;
+  --font-body: "Manrope", sans-serif;
+
+  --radius-small: 10px;
+  --radius-medium: 16px;
+  --radius-large: 24px;
+  --radius-pill: 999px;
+
+  --sidebar-width: 268px;
+  --sidebar-collapsed-width: 88px;
+  --header-height: 78px;
+
+  --transition-fast: 180ms ease;
+  --transition-smooth: 280ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+

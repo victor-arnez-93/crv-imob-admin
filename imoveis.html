@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex,nofollow">
+  <title>Imóveis — CRV Imob</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/imoveis.css">
+</head>
+<body class="admin-page" data-page="imoveis">
+  <div id="adminShell"></div>
+  <main class="admin-main">
+    <div class="page-head"><div><span class="eyebrow">Portfólio</span><h1>Imóveis</h1><p>Cadastre, organize e publique seu catálogo.</p></div><button class="button button-primary" id="newProperty"><span>Novo imóvel</span><i class="fa-solid fa-plus"></i></button></div>
+    <section class="toolbar"><div class="toolbar-search"><i class="fa-solid fa-magnifying-glass"></i><input type="search" id="propertySearch" placeholder="Buscar por título, referência ou cidade..."></div><select id="statusFilter" aria-label="Filtrar por status"><option value="all">Todos os status</option><option value="published">Publicados</option><option value="draft">Rascunhos</option><option value="sold">Vendidos</option></select><button class="button button-secondary"><i class="fa-solid fa-sliders"></i> Filtros</button></section>
+    <section class="catalog-summary"><span><b id="propertyCount">3</b> imóveis encontrados</span><div><span class="legend-dot published"></span> Publicado <span class="legend-dot draft"></span> Rascunho</div></section>
+    <section class="property-grid" id="propertyGrid"></section>
+  </main>
+
+  <div class="modal" id="propertyModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head"><div><small>Portfólio</small><h2 id="modalTitle">Novo imóvel</h2></div><button class="icon-button" type="button" data-close-modal aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button></div>
+      <form id="propertyForm">
+        <div class="form-section"><h3>Informações principais</h3><div class="form-grid"><label class="span-2">Título do imóvel<input name="title" required placeholder="Ex.: Casa contemporânea no Jardim Europa"></label><label>Referência<input name="reference" required placeholder="CRV-004"></label><label>Tipo<select name="type" required><option value="">Selecione</option><option>Casa</option><option>Apartamento</option><option>Terreno</option><option>Comercial</option><option>Rural</option></select></label><label>Valor<input name="price" required placeholder="R$ 0,00"></label><label>Status<select name="status"><option value="published">Publicado</option><option value="draft">Rascunho</option><option value="sold">Vendido</option></select></label><label class="span-2">Localização<input name="location" required placeholder="Bairro, cidade — UF"></label></div></div>
+        <div class="form-section"><h3>Características</h3><div class="form-grid four"><label>Quartos<input name="bedrooms" type="number" min="0" value="0"></label><label>Banheiros<input name="bathrooms" type="number" min="0" value="0"></label><label>Vagas<input name="parking" type="number" min="0" value="0"></label><label>Área (m²)<input name="area" type="number" min="0" value="0"></label></div></div>
+        <div class="form-section"><div class="switch-row"><div><h3>Destacar no site</h3><p>Exibir este imóvel entre as principais oportunidades.</p></div><label class="switch"><input name="featured" type="checkbox"><span></span></label></div></div>
+        <div class="modal-actions"><button class="button button-secondary" type="button" data-close-modal>Cancelar</button><button class="button button-primary" type="submit"><span>Salvar imóvel</span><i class="fa-solid fa-floppy-disk"></i></button></div>
+      </form>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/admin-shell.js"></script>
+  <script src="assets/js/weather.js"></script>
+  <script src="assets/js/imoveis.js"></script>
+</body>
+</html>

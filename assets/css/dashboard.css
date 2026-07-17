@@ -1,0 +1,302 @@
+/* ============================================================
+   CRV IMOB — DASHBOARD.CSS
+   Visão geral administrativa
+   ============================================================ */
+
+/* INDICADORES */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.stat-card {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--color-border);
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(16px);
+}
+
+.stat-icon {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+}
+
+.stat-icon.cyan {
+  color: #308ca0;
+  background: rgba(48, 140, 160, 0.12);
+}
+
+.stat-icon.khaki {
+  color: #9b8157;
+  background: rgba(155, 129, 87, 0.13);
+}
+
+.stat-icon.silver {
+  color: #8a959e;
+  background: rgba(138, 149, 158, 0.13);
+}
+
+.stat-icon.green {
+  color: var(--color-success);
+  background: color-mix(in srgb, var(--color-success) 12%, transparent);
+}
+
+.stat-card small,
+.stat-card strong,
+.stat-card span {
+  display: block;
+}
+
+.stat-card small {
+  overflow: hidden;
+  color: var(--color-muted);
+  font-size: 9px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.stat-card strong {
+  margin: 4px 0 2px;
+  font: 700 23px var(--font-title);
+}
+
+.stat-card span {
+  color: var(--color-muted);
+  font-size: 8px;
+}
+
+.stat-card span b {
+  display: inline;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.dashboard-content {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(290px, 0.65fr);
+  gap: 16px;
+}
+
+.content-card {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(16px);
+}
+
+.card-header {
+  min-height: 70px;
+  padding: 19px 21px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.card-header small {
+  color: var(--color-accent-strong);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.card-header h2 {
+  margin: 4px 0 0;
+  font-size: 17px;
+}
+
+.card-header > a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-accent-strong);
+  font-size: 9px;
+  font-weight: 800;
+}
+
+/* IMÓVEIS RECENTES */
+.recent-list {
+  padding: 5px 18px 11px;
+}
+
+.recent-property {
+  min-height: 72px;
+  padding: 10px 2px;
+  border-bottom: 1px solid var(--color-border);
+  display: grid;
+  grid-template-columns: 48px minmax(150px, 1fr) 120px 80px;
+  align-items: center;
+  gap: 12px;
+}
+
+.recent-property:last-child {
+  border-bottom: 0;
+}
+
+.recent-property-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  color: var(--color-accent-strong);
+  background: var(--color-accent-soft);
+}
+
+.recent-property strong,
+.recent-property small {
+  display: block;
+}
+
+.recent-property h3 {
+  margin: 0;
+  overflow: hidden;
+  font: 700 10px var(--font-body);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.recent-property small {
+  margin-top: 4px;
+  color: var(--color-muted);
+  font-size: 8px;
+}
+
+.recent-property > strong {
+  font-size: 10px;
+}
+
+.property-status {
+  width: fit-content;
+  padding: 5px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.property-status.published {
+  color: var(--color-success);
+  background: color-mix(in srgb, var(--color-success) 12%, transparent);
+}
+
+.property-status.draft {
+  color: var(--color-warning);
+  background: color-mix(in srgb, var(--color-warning) 12%, transparent);
+}
+
+/* AÇÕES RÁPIDAS */
+.quick-actions > a {
+  min-height: 72px;
+  padding: 13px 17px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background var(--transition-fast);
+}
+
+.quick-actions > a:last-child {
+  border-bottom: 0;
+}
+
+.quick-actions > a:hover {
+  background: var(--color-accent-soft);
+}
+
+.quick-actions > a > i:first-child {
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  color: var(--color-accent-strong);
+  background: var(--color-accent-soft);
+}
+
+.quick-actions > a > span {
+  min-width: 0;
+  flex: 1;
+}
+
+.quick-actions strong,
+.quick-actions small {
+  display: block;
+}
+
+.quick-actions strong {
+  font-size: 10px;
+}
+
+.quick-actions small {
+  margin-top: 3px;
+  color: var(--color-muted);
+  font-size: 8px;
+}
+
+.quick-actions > a > i:last-child {
+  color: var(--color-muted);
+  font-size: 10px;
+}
+
+/* RESPONSIVO TABLET */
+@media (max-width: 1180px) {
+  .dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* RESPONSIVO MOBILE */
+@media (max-width: 620px) {
+  .dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .stat-card {
+    padding: 14px 11px;
+    gap: 9px;
+  }
+
+  .stat-icon {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .stat-card strong {
+    font-size: 19px;
+  }
+
+  .recent-property {
+    grid-template-columns: 44px minmax(0, 1fr) 70px;
+  }
+
+  .recent-property-image {
+    width: 44px;
+    height: 44px;
+  }
+
+  .recent-property > strong {
+    display: none;
+  }
+}

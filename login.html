@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#080a0d">
+
+  <title>Entrar — CRV Imob</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body class="login-page">
+  <a class="login-logo" href="index.html" aria-label="Voltar à apresentação do CRV Imob">
+    <img src="assets/img/logo1.png" alt="CRV Soluções em TI">
+  </a>
+
+  <button class="icon-button login-theme-toggle" type="button" data-theme-toggle aria-label="Alternar tema">
+    <i class="fa-solid fa-sun"></i>
+  </button>
+
+  <main class="login-main">
+    <section class="login-card">
+      <div class="login-card-header">
+        <span class="login-icon">
+          <i class="fa-solid fa-lock"></i>
+        </span>
+
+        <small>Área restrita</small>
+        <h1>Acesse seu painel</h1>
+        <p>Use as credenciais cadastradas pela CRV.</p>
+      </div>
+
+      <form id="loginForm" class="login-form" novalidate>
+        <label for="loginEmail">E-mail</label>
+
+        <div class="input-wrapper">
+          <i class="fa-regular fa-envelope"></i>
+          <input id="loginEmail" name="email" type="email" placeholder="voce@empresa.com.br" autocomplete="email" required>
+        </div>
+
+        <label for="loginPassword">Senha</label>
+
+        <div class="input-wrapper">
+          <i class="fa-solid fa-key"></i>
+          <input id="loginPassword" name="password" type="password" placeholder="Sua senha" autocomplete="current-password" minlength="6" required>
+
+          <button id="togglePassword" type="button" aria-label="Mostrar senha">
+            <i class="fa-regular fa-eye"></i>
+          </button>
+        </div>
+
+        <div class="login-options">
+          <label class="custom-check">
+            <input type="checkbox" name="remember">
+            <span>Lembrar acesso</span>
+          </label>
+
+          <button id="forgotPassword" class="text-button" type="button">
+            Esqueci a senha
+          </button>
+        </div>
+
+        <button class="button button-primary button-block" type="submit" id="loginSubmit">
+          <span>Entrar</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+        <p class="form-feedback" id="loginFeedback" role="status"></p>
+      </form>
+
+      <a class="back-link" href="index.html">
+        <i class="fa-solid fa-arrow-left"></i>
+        Voltar à apresentação
+      </a>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/login.js"></script>
+</body>
+</html>

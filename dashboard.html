@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Dashboard — CRV Imob</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body class="admin-page" data-page="dashboard">
+  <div id="adminShell"></div>
+
+  <main class="admin-main">
+    <section class="page-heading">
+      <div>
+        <span class="eyebrow">Visão geral</span>
+        <h1>Olá, <span data-user-first-name>usuário</span>.</h1>
+        <p>Acompanhe o que está acontecendo com seu portfólio.</p>
+      </div>
+
+      <a class="button button-primary" href="imoveis.html?action=new">
+        <span>Novo imóvel</span>
+        <i class="fa-solid fa-plus"></i>
+      </a>
+    </section>
+
+    <section class="dashboard-stats">
+      <article class="stat-card">
+        <span class="stat-icon cyan"><i class="fa-solid fa-building"></i></span>
+        <div>
+          <small>Imóveis cadastrados</small>
+          <strong data-stat-properties>—</strong>
+          <span><b data-stat-published>—</b> publicados</span>
+        </div>
+      </article>
+
+      <article class="stat-card">
+        <span class="stat-icon khaki"><i class="fa-solid fa-star"></i></span>
+        <div>
+          <small>Em destaque</small>
+          <strong data-stat-featured>—</strong>
+          <span>Exibidos na página inicial</span>
+        </div>
+      </article>
+
+      <article class="stat-card">
+        <span class="stat-icon silver"><i class="fa-regular fa-eye"></i></span>
+        <div>
+          <small>Visualizações</small>
+          <strong>—</strong>
+          <span>Métrica futura do site</span>
+        </div>
+      </article>
+
+      <article class="stat-card">
+        <span class="stat-icon green"><i class="fa-brands fa-whatsapp"></i></span>
+        <div>
+          <small>Contatos iniciados</small>
+          <strong>—</strong>
+          <span>Integração futura</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="dashboard-content">
+      <article class="content-card recent-properties">
+        <header class="card-header">
+          <div>
+            <small>Portfólio</small>
+            <h2>Imóveis recentes</h2>
+          </div>
+          <a href="imoveis.html">Ver todos <i class="fa-solid fa-arrow-right"></i></a>
+        </header>
+
+        <div class="recent-list" id="recentProperties">
+          <div class="empty-state compact">
+            <i class="fa-solid fa-spinner fa-spin"></i>
+            <span>Carregando imóveis...</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="content-card quick-actions">
+        <header class="card-header">
+          <div>
+            <small>Acesso rápido</small>
+            <h2>Ações essenciais</h2>
+          </div>
+        </header>
+
+        <a href="imoveis.html?action=new">
+          <i class="fa-solid fa-house-circle-check"></i>
+          <span><strong>Cadastrar imóvel</strong><small>Adicionar ao portfólio</small></span>
+          <i class="fa-solid fa-chevron-right"></i>
+        </a>
+
+        <a href="imoveis.html?filter=featured">
+          <i class="fa-solid fa-star"></i>
+          <span><strong>Gerenciar destaques</strong><small>Organizar página inicial</small></span>
+          <i class="fa-solid fa-chevron-right"></i>
+        </a>
+
+        <a href="configuracoes.html">
+          <i class="fa-solid fa-sliders"></i>
+          <span><strong>Dados da empresa</strong><small>Contato e identidade</small></span>
+          <i class="fa-solid fa-chevron-right"></i>
+        </a>
+      </article>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/admin-shell.js"></script>
+  <script src="assets/js/weather.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

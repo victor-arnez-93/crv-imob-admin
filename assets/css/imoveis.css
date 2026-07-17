@@ -1,0 +1,509 @@
+/* ============================================================
+   CRV IMOB — IMOVEIS.CSS
+   Catálogo administrativo · Filtros · Cards · Formulário
+   ============================================================ */
+
+/* COMPATIBILIDADE DOS BOTÕES DA PÁGINA */
+.btn {
+  position: relative;
+  min-height: 46px;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: var(--button-text);
+  background: var(--button-bg);
+  box-shadow: 0 12px 30px color-mix(in srgb, var(--button-glow) 18%, transparent);
+}
+
+.btn-secondary {
+  color: var(--color-text);
+  border-color: var(--color-border);
+  background: var(--color-surface);
+}
+
+/* BARRA DE FILTROS */
+.toolbar {
+  padding: 13px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  display: flex;
+  gap: 9px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(16px);
+}
+
+.toolbar-search {
+  min-width: 250px;
+  flex: 1;
+  padding: 0 13px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--color-surface-muted);
+}
+
+.toolbar-search i,
+.toolbar-search svg {
+  color: var(--color-muted);
+}
+
+.toolbar-search input {
+  width: 100%;
+  height: 45px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 11px;
+}
+
+.toolbar select {
+  min-width: 170px;
+  padding: 0 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  outline: 0;
+  background: var(--color-surface-muted);
+  font-size: 11px;
+}
+
+.catalog-summary {
+  margin: 18px 3px 11px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-muted);
+  font-size: 9px;
+}
+
+.catalog-summary b {
+  color: var(--color-text);
+}
+
+.legend-dot {
+  width: 7px;
+  height: 7px;
+  margin: 0 4px 0 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-dot.published {
+  background: var(--color-success);
+}
+
+.legend-dot.draft {
+  background: var(--color-warning);
+}
+
+/* GRID DE IMÓVEIS */
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+.property-card {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 19px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(16px);
+}
+
+.card-media {
+  position: relative;
+  height: 175px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.92);
+  background: linear-gradient(145deg, #919ca5, #34414d);
+}
+
+.card-media.alt {
+  background: linear-gradient(145deg, #b7a998, #5d544c);
+}
+
+.card-media.terrain {
+  background: linear-gradient(145deg, #9a9e83, #4a513d);
+}
+
+.card-media > i,
+.card-media > svg {
+  width: 48px;
+  height: 48px;
+  font-size: 44px;
+  opacity: 0.62;
+}
+
+.card-media .featured {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 9px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #ffffff;
+  background: rgba(5, 7, 10, 0.72);
+  backdrop-filter: blur(8px);
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.card-media .status {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.status {
+  width: fit-content;
+  padding: 5px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.status.published {
+  color: var(--color-success);
+  background: color-mix(in srgb, var(--color-surface-solid) 92%, transparent);
+}
+
+.status.draft {
+  color: var(--color-warning);
+  background: color-mix(in srgb, var(--color-surface-solid) 92%, transparent);
+}
+
+.status.sold {
+  color: var(--color-muted);
+  background: color-mix(in srgb, var(--color-surface-solid) 92%, transparent);
+}
+
+.card-body {
+  padding: 17px;
+}
+
+.card-code {
+  color: var(--color-accent-strong);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.card-body h2 {
+  margin: 6px 0 5px;
+  overflow: hidden;
+  font-size: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card-location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--color-muted);
+  font-size: 8px;
+}
+
+.card-features {
+  margin: 15px 0;
+  padding: 11px 0;
+  border-block: 1px solid var(--color-border);
+  display: flex;
+  gap: 14px;
+  color: var(--color-muted);
+  font-size: 8px;
+}
+
+.card-features span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card-price small,
+.card-price strong {
+  display: block;
+}
+
+.card-price small {
+  color: var(--color-muted);
+  font-size: 7px;
+}
+
+.card-price strong {
+  margin-top: 3px;
+  font: 700 17px var(--font-title);
+}
+
+.card-actions {
+  display: flex;
+  gap: 5px;
+}
+
+/* MODAL DO IMÓVEL */
+.modal {
+  position: fixed;
+  z-index: 240;
+  inset: 0;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility var(--transition-fast), opacity var(--transition-fast);
+}
+
+.modal.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 5, 8, 0.72);
+  backdrop-filter: blur(7px);
+}
+
+.modal-card {
+  position: relative;
+  width: min(780px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 23px;
+  background: var(--color-surface-solid);
+  box-shadow: var(--shadow-strong);
+  transform: translateY(10px) scale(0.98);
+  transition: transform var(--transition-smooth);
+}
+
+.modal.is-open .modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.modal-head {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  padding: 19px 22px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-surface-solid);
+}
+
+.modal-head small {
+  color: var(--color-accent-strong);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.modal-head h2 {
+  margin: 4px 0 0;
+  font-size: 19px;
+}
+
+.form-section {
+  padding: 21px 23px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.form-section h3 {
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.form-grid.four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.form-grid label {
+  color: var(--color-muted);
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+  width: 100%;
+  min-height: 45px;
+  padding: 0 12px;
+  margin-top: 7px;
+  border: 1px solid var(--color-border);
+  border-radius: 11px;
+  outline: 0;
+  background: var(--color-surface-muted);
+}
+
+.form-grid textarea {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  resize: vertical;
+}
+
+.form-grid input:focus,
+.form-grid select:focus,
+.form-grid textarea:focus {
+  border-color: color-mix(in srgb, var(--color-accent) 70%, transparent);
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.switch-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.switch-row h3 {
+  margin-bottom: 5px;
+}
+
+.switch-row p {
+  margin-bottom: 0;
+  color: var(--color-muted);
+  font-size: 9px;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch span {
+  position: relative;
+  width: 47px;
+  height: 27px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  display: block;
+  background: var(--color-surface-muted);
+  cursor: pointer;
+}
+
+.switch span::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: var(--color-muted);
+  transition: left var(--transition-fast), background var(--transition-fast);
+}
+
+.switch input:checked + span {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.switch input:checked + span::after {
+  left: 23px;
+  background: var(--color-accent-strong);
+}
+
+.modal-actions {
+  position: sticky;
+  bottom: 0;
+  padding: 15px 23px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  background: var(--color-surface-solid);
+}
+
+/* RESPONSIVO TABLET */
+@media (max-width: 1180px) {
+  .property-grid {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+  }
+}
+
+/* RESPONSIVO MOBILE */
+@media (max-width: 700px) {
+  .toolbar {
+    flex-wrap: wrap;
+  }
+
+  .toolbar-search {
+    min-width: 100%;
+  }
+
+  .toolbar select {
+    min-height: 45px;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .catalog-summary > div {
+    display: none;
+  }
+
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal {
+    padding: 0;
+    align-items: end;
+  }
+
+  .modal-card {
+    max-height: 94vh;
+    border-radius: 22px 22px 0 0;
+  }
+
+  .form-grid,
+  .form-grid.four {
+    grid-template-columns: 1fr;
+  }
+
+  .span-2 {
+    grid-column: auto;
+  }
+
+  .modal-actions .btn {
+    flex: 1;
+    padding: 0 12px;
+  }
+}
+
